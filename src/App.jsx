@@ -10,7 +10,7 @@ function App() {
 
     const AddValue = function () {
         if (count !== 20) {
-            setAddButton(false);
+            RemoveButtonOn();
             setCount(count + 1);
         } else {
             setAddButton(true);
@@ -19,13 +19,20 @@ function App() {
 
     const RemoveValue = function () {
         if (count !== 0) {
-            setRemoveButton(false);
+            AddButtonOn();
             setCount(count - 1);
         } else {
             setRemoveButton(true);
         }
     };
 
+    // function's for again activing the buttons
+    function AddButtonOn() {
+        setAddButton(false);
+    }
+    function RemoveButtonOn() {
+        setRemoveButton(false);
+    }
     return (
         <>
             <div>
